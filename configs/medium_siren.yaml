@@ -1,0 +1,25 @@
+domain:
+  name: medium
+  lat_min: 36.0
+  lat_max: 42.0
+  lon_min: 26.0
+  lon_max: 45.0
+  date_range: ["2025-06-01", "2025-06-30"]
+  resolution: 0.25
+
+method: siren
+
+hyperparams:
+  # Mimari small ile AYNI tutuldu (96x5, w0=5) -- scalability analizinde
+  # değişen tek şey domain boyutu olmalı, mimari değil. Aksi halde
+  # "yavaşlama domain'den mi mimariden mi geldi" sorusu belirsizleşir.
+  hidden_dim: 96
+  depth: 5
+  w0: 5
+  n_epochs: 42297  # orantili artis: small'daki 20000 epoch ~2975x coverage sagliyordu,
+                    # medium'da ayni batch_size ile sadece ~236x kaliyordu (undertraining).
+                    # 42297 epoch ile hedef ~500x coverage'a cekildi.
+  seed: 0
+
+n_repeats: 5
+device: cuda

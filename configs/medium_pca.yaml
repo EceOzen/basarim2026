@@ -1,0 +1,16 @@
+domain:
+  name: medium
+  lat_min: 36.0
+  lat_max: 42.0
+  lon_min: 26.0
+  lon_max: 45.0
+  date_range: ["2025-06-01", "2025-06-30"]
+  resolution: 0.25
+
+method: pca
+
+hyperparams:
+  n_components: 10   # small ile aynı tutuldu -- yöntemler arası karşılaştırmada sabit kalması gereken parametre
+
+n_repeats: 5
+device: cpu

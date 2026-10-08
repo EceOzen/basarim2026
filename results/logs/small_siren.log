@@ -1,0 +1,10 @@
+[run_experiment] domain=small method=siren device=cuda n_repeats=5
+[era5] önbellekten kullanılıyor: era5_cache/t2m_39p5_41p5_26p0_30p0_2025-06-01_2025-06-30_0p25.nc
+[era5] ensemble spread önbellekten kullanılıyor: era5_cache/t2m_spread_39p5_41p5_26p0_30p0_2025-06-01_2025-06-30_0p25.nc
+[run_experiment] error bounds: b_low=0.0771 b_mid=0.1320 b_high=0.1722
+  repeat 0: encode=37.505s decode=0.005s rmse=0.2747 passes_b_mid=False
+  repeat 1: encode=37.270s decode=0.005s rmse=0.2769 passes_b_mid=False
+  repeat 2: encode=34.725s decode=0.004s rmse=0.2432 passes_b_mid=False
+  repeat 3: encode=37.169s decode=0.004s rmse=0.2648 passes_b_mid=False
+  repeat 4: encode=36.016s decode=0.005s rmse=0.2876 passes_b_mid=False
+[run_experiment] Tamamlandı. Sonuçlar: results/experiment_results.csv

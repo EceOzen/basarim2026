@@ -1,0 +1,17 @@
+[run_experiment] domain=large method=pca device=cpu n_repeats=5
+2026-08-19 13:59:40,971 INFO Request ID is c2b94837-2eb3-4216-a064-557f2de3c098
+2026-08-19 13:59:41,048 INFO status has been updated to accepted
+2026-08-19 14:00:02,546 INFO status has been updated to successful
+90f856a74488de7d7e6358e722afb7a2.nc:   0%|          | 0.00/5.90M [00:00<?, ?B/s]90f856a74488de7d7e6358e722afb7a2.nc:  17%|█▋        | 1.00M/5.90M [00:00<00:03, 1.56MB/s]90f856a74488de7d7e6358e722afb7a2.nc:  68%|██████▊   | 4.00M/5.90M [00:00<00:00, 6.60MB/s]                                                                                         [era5] indirildi ve önbelleklendi: era5_cache/t2m_30p0_42p0_19p0_45p0_2025-06-01_2025-06-30_0p25.nc
+2026-08-19 14:00:05,063 INFO Request ID is 3f50cae0-e92c-46f1-a820-85a70be7a16d
+2026-08-19 14:00:05,419 INFO status has been updated to accepted
+2026-08-19 14:00:21,363 INFO status has been updated to running
+2026-08-19 14:00:57,988 INFO status has been updated to successful
+faa25067d30bd4cbd14d061793951fcc.nc:   0%|          | 0.00/2.58M [00:00<?, ?B/s]faa25067d30bd4cbd14d061793951fcc.nc:  39%|███▊      | 1.00M/2.58M [00:00<00:00, 1.98MB/s]                                                                                         [era5] ensemble spread indirildi ve önbelleklendi: era5_cache/t2m_spread_30p0_42p0_19p0_45p0_2025-06-01_2025-06-30_0p25.nc
+[run_experiment] error bounds: b_low=0.0620 b_mid=0.1345 b_high=0.1710
+  repeat 0: encode=0.868s decode=0.103s rmse=0.7370 passes_b_mid=False
+  repeat 1: encode=0.790s decode=0.191s rmse=0.7370 passes_b_mid=False
+  repeat 2: encode=0.690s decode=0.182s rmse=0.7370 passes_b_mid=False
+  repeat 3: encode=0.808s decode=0.187s rmse=0.7370 passes_b_mid=False
+  repeat 4: encode=0.940s decode=0.102s rmse=0.7370 passes_b_mid=False
+[run_experiment] Tamamlandı. Sonuçlar: results/experiment_results.csv

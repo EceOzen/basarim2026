@@ -1,0 +1,21 @@
+[small]  data 0.42 MB, field std 4.595 K
+  encode ms          : 2.655 ± 0.105 (med 2.670)
+  decode ms          : 5.013 ± 10.572 (med 0.303)
+  peak tracemalloc MB: encode 0.63 ± 0.02 (med 0.62) | decode 0.98 ± 0.02 (med 0.99)
+  peak RSS delta MB  : encode 0.00 ± 0.00 (med 0.00) | decode 0.00 ± 0.00 (med 0.00)
+  RMSE 0.3389 ± 0.0000 (med 0.3389)  ->  nRMSE (RMSE/std) 0.0738 ± 0.0000 (med 0.0738)
+
+[medium]  data 5.29 MB, field std 6.857 K
+  encode ms          : 717.340 ± 94.292 (med 729.225)
+  decode ms          : 121.304 ± 41.383 (med 103.242)
+  peak tracemalloc MB: encode 5.83 ± 0.02 (med 5.84) | decode 10.86 ± 0.01 (med 10.86)
+  peak RSS delta MB  : encode 0.00 ± 0.00 (med 0.00) | decode 0.00 ± 0.00 (med 0.00)
+  RMSE 0.7579 ± 0.0000 (med 0.7579)  ->  nRMSE (RMSE/std) 0.1105 ± 0.0000 (med 0.1105)
+
+[large]  data 14.13 MB, field std 6.530 K
+  encode ms          : 817.432 ± 79.091 (med 831.784)
+  decode ms          : 447.258 ± 580.827 (med 188.079)
+  peak tracemalloc MB: encode 15.42 ± 0.01 (med 15.42) | decode 28.81 ± 0.00 (med 28.81)
+  peak RSS delta MB  : encode 0.00 ± 0.00 (med 0.00) | decode 0.00 ± 0.00 (med 0.00)
+  RMSE 0.7370 ± 0.0000 (med 0.7370)  ->  nRMSE (RMSE/std) 0.1129 ± 0.0000 (med 0.1129)
+

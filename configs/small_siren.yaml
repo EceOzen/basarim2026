@@ -1,0 +1,26 @@
+# Domain tanımı — blog serisindeki Marmara bounding box'ı (referans/en küçük domain)
+domain:
+  name: small
+  lat_min: 39.5
+  lat_max: 41.5
+  lon_min: 26.0
+  lon_max: 30.0
+  date_range: ["2025-06-01", "2025-06-30"]
+  resolution: 0.25  # derece, ERA5 single-levels tipik çözünürlüğü
+
+# Hangi yöntem çalışacak (run_experiment.py bunu okuyup ilgili sınıfı seçecek)
+method: siren
+
+# Yöntem-özel hiperparametreler
+hyperparams:
+  hidden_dim: 96   # notebook'taki 96x5 mimarisiyle aynı (w0 sabitlemesinin test edildiği konfig)
+  depth: 5
+  w0: 5            # notebook bulgusu: w0=30 depth-5'te kararsız, w0=5 stabil
+  n_epochs: 20000  # notebook'taki train_siren varsayılanıyla aynı
+  seed: 0
+
+# Kaç kere tekrarlanacak (istatistiksel güvenilirlik için)
+n_repeats: 5
+
+# Ölçüm cihazı
+device: cuda   # GPU yoksa "cpu" yap

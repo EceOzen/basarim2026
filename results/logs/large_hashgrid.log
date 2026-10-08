@@ -1,0 +1,10 @@
+[run_experiment] domain=large method=hashgrid device=cuda n_repeats=5
+[era5] önbellekten kullanılıyor: era5_cache/t2m_30p0_42p0_19p0_45p0_2025-06-01_2025-06-30_0p25.nc
+[era5] ensemble spread önbellekten kullanılıyor: era5_cache/t2m_spread_30p0_42p0_19p0_45p0_2025-06-01_2025-06-30_0p25.nc
+[run_experiment] error bounds: b_low=0.0620 b_mid=0.1345 b_high=0.1710
+  repeat 0: encode=2386.956s decode=1.333s rmse=1.2589 passes_b_mid=False
+  repeat 1: encode=2379.761s decode=1.305s rmse=1.1867 passes_b_mid=False
+  repeat 2: encode=2348.366s decode=1.341s rmse=1.2178 passes_b_mid=False
+  repeat 3: encode=2291.597s decode=1.311s rmse=1.2088 passes_b_mid=False
+  repeat 4: encode=2289.350s decode=1.317s rmse=1.2377 passes_b_mid=False
+[run_experiment] Tamamlandı. Sonuçlar: results/experiment_results.csv

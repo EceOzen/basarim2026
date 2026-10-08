@@ -1,0 +1,4 @@
+n_levels,kernels_per_step,gpu_busy_ms_per_step,wall_ms_per_step,gpu_busy_fraction
+4,1781.0,4.684,4.346,1.078
+8,3520.9,9.198,64.271,0.143
+12,5260.85,13.389,52.167,0.257

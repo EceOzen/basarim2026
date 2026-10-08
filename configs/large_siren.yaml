@@ -1,0 +1,23 @@
+domain:
+  name: large
+  lat_min: 30.0
+  lat_max: 42.0
+  lon_min: 19.0
+  lon_max: 45.0
+  date_range: ["2025-06-01", "2025-06-30"]
+  resolution: 0.25
+
+method: siren
+
+hyperparams:
+  # Mimari small/medium ile AYNI (96x5, w0=5) -- bkz. medium_siren.yaml'daki not
+  hidden_dim: 96
+  depth: 5
+  w0: 5
+  n_epochs: 113049  # orantili artis: large'da 20000 epoch sadece ~88x coverage sagliyordu.
+                     # 113049 epoch ile hedef ~500x coverage'a cekildi (SIREN ucuz oldugu
+                     # icin bu, ~3.2dk/kosu ek maliyetle geliyor).
+  seed: 0
+
+n_repeats: 5
+device: cuda

@@ -1,0 +1,27 @@
+domain:
+  name: large
+  lat_min: 30.0
+  lat_max: 42.0
+  lon_min: 19.0
+  lon_max: 45.0
+  date_range: ["2025-06-01", "2025-06-30"]
+  resolution: 0.25
+
+method: hashgrid
+
+hyperparams:
+  # Grid boyutu: n_lat=49, n_lon=105, n_time=720
+  # finest_resolution = max(n_lat, n_lon)'un bir üstteki 2'nin kuvveti (105 -> 128)
+  n_levels: 12
+  n_features_per_level: 2
+  log2_hashmap_size: 14   # 2^14 = 16384 satır/seviye -> öngörülen ~9.3x compression
+  base_resolution: 4
+  finest_resolution: 128
+  mlp_hidden_dim: 64
+  n_epochs: 67829  # orantili artis: 20000 epoch sadece ~88x coverage sagliyordu (en dusuk
+                    # coverage, en cok "undertrained" domain buydu). 67829 epoch ile ~300x'e
+                    # cekildi. 5 tekrarla toplam ek maliyet ~3.27 saat.
+  seed: 0
+
+n_repeats: 5
+device: cuda

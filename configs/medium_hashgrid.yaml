@@ -1,0 +1,28 @@
+domain:
+  name: medium
+  lat_min: 36.0
+  lat_max: 42.0
+  lon_min: 26.0
+  lon_max: 45.0
+  date_range: ["2025-06-01", "2025-06-30"]
+  resolution: 0.25
+
+method: hashgrid
+
+hyperparams:
+  # Grid boyutu: n_lat=25, n_lon=77, n_time=720 (0.25 derece, 30 gün saatlik)
+  # finest_resolution = max(n_lat, n_lon)'un bir üstteki 2'nin kuvveti (77 -> 128)
+  # log2_hashmap_size = ~7-9x hedef compression ratio'dan geriye çözüldü
+  n_levels: 10
+  n_features_per_level: 2
+  log2_hashmap_size: 13   # 2^13 = 8192 satır/seviye -> öngörülen ~8.2x compression
+  base_resolution: 4      # tüm domain'lerde sabit -- her zaman kaba başla
+  finest_resolution: 128
+  mlp_hidden_dim: 64
+  n_epochs: 25378  # orantili artis: 20000 epoch ~236x coverage sagliyordu, hedef ~300x'e
+                    # cekildi. hash-grid pahali (per-epoch ~15-20x SIREN'den yavas) oldugu
+                    # icin SIREN'deki gibi 500x hedeflemedik -- maliyet/fayda dengesi.
+  seed: 0
+
+n_repeats: 5
+device: cuda

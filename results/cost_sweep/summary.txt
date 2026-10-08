@@ -1,0 +1,16 @@
+device: NVIDIA L4 | torch 2.8.0+cu128 | python 3.12.3
+data: synthetic (9, 17, 720) | epochs: 100->600 | repeats: 3
+
+L taraması: ms/adım = 2.900 * L + 9.749   (R^2 = 0.9331)
+  -> seviye başına maliyet ≈ 2.90 ms; L'den bağımsız sabit kısım ≈ 9.75 ms
+T taraması: 32.87–37.59 ms/adım (göreli yayılım %13.6) over log2_hashmap_size = [9, 11, 13, 14, 15, 17, 19]
+N taraması: 26.67–34.94 ms/adım (göreli yayılım %27.5) over finest_resolution = [16, 32, 64, 128, 256]
+Makale konfigürasyonları (bu ölçüm vs. Tablo III'ten türetilen):
+  L=8 T=9 Nmax=32                34.72 ms  vs  23.5 ms
+  L=10 T=13 Nmax=128             42.47 ms  vs  29.3 ms
+  L=12 T=14 Nmax=128             48.79 ms  vs  34.5 ms
+SIREN: 2.05 ms/adım (makale ≈1.8 ms)
+Profiler:
+  L=4: 1781 kernel/adım, GPU meşgul oranı %108
+  L=8: 3521 kernel/adım, GPU meşgul oranı %14
+  L=12: 5261 kernel/adım, GPU meşgul oranı %26

@@ -1,0 +1,16 @@
+domain:
+  name: small
+  lat_min: 39.5
+  lat_max: 41.5
+  lon_min: 26.0
+  lon_max: 30.0
+  date_range: ["2025-06-01", "2025-06-30"]
+  resolution: 0.25
+
+method: pca
+
+hyperparams:
+  n_components: 10   # notebook Cell 43'teki component_counts listesinden bir örnek
+
+n_repeats: 5
+device: cpu   # PCA genelde GPU gerektirmez

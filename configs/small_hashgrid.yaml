@@ -1,0 +1,25 @@
+domain:
+  name: small
+  lat_min: 39.5
+  lat_max: 41.5
+  lon_min: 26.0
+  lon_max: 30.0
+  date_range: ["2025-06-01", "2025-06-30"]
+  resolution: 0.25
+
+method: hashgrid
+
+hyperparams:
+  n_levels: 8
+  n_features_per_level: 2
+  log2_hashmap_size: 9   # DUZELTME: kural geregi 9 olmali (once 14 olarak kalmisti,
+                          # medium/large guncellenirken small unutulmustu -- bu satirin
+                          # 14 oldugu eski calistirmada compression ratio 0.412x cikmisti)
+  base_resolution: 4
+  finest_resolution: 128  # domain'in gerçek grid boyutuna göre ayarla (çok küçükse gereksiz, çok büyükse yetersiz)
+  mlp_hidden_dim: 64
+  n_epochs: 20000
+  seed: 0
+
+n_repeats: 5
+device: cuda
